@@ -1,0 +1,75 @@
+//input
+var L1 = 4
+var theta_1 = 90
+var L2 = 4
+var theta_2 = 0
+
+//output
+var x1 = L1*cosd(theta_1)
+var y1 = L1*sind(theta_1)
+
+out("x1: " + x1 + "y1: " + y1)
+
+var x2 = L2*cosd(theta_2)
+var y2 = L2*sind(theta_2)
+
+out("x2: " + x2 + "y2: " + y2)
+//law of cos
+function law_of_cos(a, b, c){
+	return acosd((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2*a*b))  
+}
+
+var a = L1
+var b = x2
+var c = L2
+var theta_1 = law_of_cos(a, b, c)
+
+out("theta_1: " + theta_1)
+
+var D = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2))
+Var theta_a = atan2d(y2, x2)
+
+var a = L1
+var b = D
+var c = L2
+var theta_b = law_of_cos(a, b, c)
+theta_1 = theta_a + theta_b
+
+out("theta_1: " + theta_1)
+
+var x1 = cosd(theta_1) * L1
+var y1 = sind(theta_1) * L1
+
+theta_2 = atand((y2-y21) / (x2-x1))//inputs to funtion
+x2 y2
+
+// output
+theta_1
+theta_2
+
+function calc_theta1_theta_2(x2, y2){
+	let var D = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2))
+	let Var theta_a = atan2d(y2, x2)
+
+	let var a = L1
+	let var b = D
+	let var c = L2
+	let var theta_b = law_of_cos(a, b, c)
+	let theta_1 = theta_a + theta_b
+    let out("theta_1: " + theta_1)
+
+	let var x1 = cosd(theta_1) * L1
+	let var y1 = sind(theta_1) * L1
+
+	let theta_2 = atand((y2-y21) / (x2-x1))//inputs to funtion
+
+	return [theta_1, theta_2]
+}
+
+var point_2 = [3, 4]
+var link1 = 3
+var link2 = 4
+calc_theta1_theta2(point_2[0], point_2[1], link1, link2)
+ 
+
+
