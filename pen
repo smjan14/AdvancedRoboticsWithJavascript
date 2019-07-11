@@ -1,0 +1,33 @@
+function getParameterDefinitions() {
+    return [{ name: 'r1', type: 'float', initial: 3.5, caption: 'radius 1' }, 
+            { name: 'r2', type: 'float', initial: 4.75, caption: 'radius 2' }];
+}
+
+function main() { 
+var r1 - pramas.r1
+var r2 - params.r2
+var w - 8
+var h - 15.5
+
+return difference(
+    cube([20, 20, 40]), translate([-15, -10, 0]),
+    translate([10, 0, 30], cylinder({r1:r1,r2:r2,h:40)}),rotateY(-90),
+union(
+ rotate([0,0,45],translate([-w/2,-w/2,0],color("black",cube([w,w,h])))),
+ translate([0,-w/2,0],color("black",cube([w/2,w,h]))),
+ translate([-13.5,-15,-3],color("black",cube([20,40,3]))),
+ rotate([0,90,0],translate([-15,-15,3.5],color("black",cube([15,40,3]))))
+ )
+    
+}
+
+function getParameterDefinitions() {
+    return [
+        {  name: 'pen_d',
+           type: 'int',
+           initial: 8, min: 0, max: 99,
+           caption: 'Pen diameter'
+        }
+    ];
+
+}
