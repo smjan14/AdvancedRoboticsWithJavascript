@@ -21,13 +21,3 @@ union(
     
 }
 
-function getParameterDefinitions() {
-    return [
-        {  name: 'pen_d',
-           type: 'int',
-           initial: 8, min: 0, max: 99,
-           caption: 'Pen diameter'
-        }
-    ];
-
-}
